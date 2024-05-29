@@ -1,6 +1,6 @@
 import React from "react";
 
-const Person = ({ name, id, role, img, edit }) => {
+const Person = ({ name, id, role, img, edit, eliminar, modal }) => {
   return (
     <>
       <div className="space-y-6">
@@ -19,7 +19,10 @@ const Person = ({ name, id, role, img, edit }) => {
         >
           Editar
         </button>
-        <button className="bg-red-400 px-4 py-2 rounded-lg hover:bg-red-700 hover:cursor-pointer hover:font-bold">
+        <button
+          className="bg-red-400 px-4 py-2 rounded-lg hover:bg-red-700 hover:cursor-pointer hover:font-bold"
+          onClick={() => eliminar(id)}
+        >
           Eliminar
         </button>
       </div>
